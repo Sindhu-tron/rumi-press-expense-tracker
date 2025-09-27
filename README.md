@@ -133,7 +133,7 @@ rumi_press/
 
 **Expense Analysis**
 *Category-wise expense breakdown with visual indicators*
-![Expense Analysis](screenshots/expense-analysis.png)
+<img width="1417" height="736" alt="image" src="https://github.com/user-attachments/assets/7f49ba1b-b7db-4061-9215-c05fa1818760" />
 
 
 **Data Import**
