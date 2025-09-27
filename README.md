@@ -138,7 +138,7 @@ rumi_press/
 
 **Data Import**
 *Excel file processing with progress tracking*
-![Data Import](screenshots/import.png)
+<img width="1417" height="736" alt="image" src="https://github.com/user-attachments/assets/2d32cfd1-a7c0-48b8-8ed5-9248a2e185e1" />
 
 
 
