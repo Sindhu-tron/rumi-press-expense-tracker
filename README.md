@@ -123,7 +123,7 @@ rumi_press/
 ## Screenshots
 **Dashboard Overview**
 *Real-time analytics showing 4,090 books across 11 categories*
-![Dashboard](screenshots/Dashboardoverview.png) 
+<img width="1417" height="736" alt="image" src="https://github.com/user-attachments/assets/dfe1a290-8460-47e6-a43b-2072fb2a47a4" />
 
 
 **Book Management**
