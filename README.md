@@ -128,7 +128,7 @@ rumi_press/
 
 **Book Management**
 *Complete CRUD interface with search and filtering*
-<img width="1417" height="736" alt="image" src="https://github.com/user-attachments/assets/9a49ca12-01e8-4997-860c-d4c46eba6097" />
+<img width="1417" height="736" alt="image" src="https://github.com/user-attachments/assets/c5368aef-1984-4f9e-9449-66c3a1a76b1f" />
 
 
 **Expense Analysis**
