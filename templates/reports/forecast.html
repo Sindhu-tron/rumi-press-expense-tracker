@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Forecasting - Rumi Press{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <h1 class="mb-4">
+        <i class="fas fa-crystal-ball"></i> Expense Forecasting
+    </h1>
+    
+    <div class="card">
+        <div class="card-body">
+            <h5>Predictive Analytics</h5>
+            <p>Expense forecasting features will be available here.</p>
+            <p>This section will include:</p>
+            <ul>
+                <li>📈 Future expense predictions</li>
+                <li>📊 Trend analysis</li>
+                <li>🎯 Budget recommendations</li>
+                <li>⚡ Machine learning insights</li>
+            </ul>
+            <a href="{% url 'dashboard' %}" class="btn btn-primary">Back to Dashboard</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

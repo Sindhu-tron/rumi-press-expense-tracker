@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}Expense Analysis - Rumi Press{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <h1 class="mb-4">
+        <i class="fas fa-chart-pie"></i> Expense Breakdown
+    </h1>
+    
+    <div class="card">
+        <div class="card-header">
+            <h5>Expense Analysis by Category</h5>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Books Count</th>
+                            <th>Total Expenses</th>
+                            <th>Average Cost per Book</th>
+                            <th>Percentage of Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for category in category_data %}
+                        <tr>
+                            <td><strong>{{ category.name }}</strong></td>
+                            <td><span class="badge bg-primary">{{ category.book_count }}</span></td>
+                            <td><strong class="text-success">${{ category.total_expense|floatformat:2 }}</strong></td>
+                            <td>${{ category.avg_expense|floatformat:2 }}</td>
+                            <td>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 25%"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

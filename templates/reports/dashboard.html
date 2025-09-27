@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard - Rumi Press{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <h1 class="mb-4">
+        <i class="fas fa-chart-dashboard"></i> Dashboard Overview
+    </h1>
+    
+    <!-- Stats Cards -->
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <div class="card bg-primary text-white">
+                <div class="card-body text-center">
+                    <h5>Total Books</h5>
+                    <h2>{{ total_books }}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bg-success text-white">
+                <div class="card-body text-center">
+                    <h5>Categories</h5>
+                    <h2>{{ total_categories }}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bg-warning text-white">
+                <div class="card-body text-center">
+                    <h5>Total Expenses</h5>
+                    <h2>${{ total_expenses|floatformat:2 }}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Category Breakdown -->
+    <div class="card">
+        <div class="card-header">
+            <h5><i class="fas fa-table"></i> Category Breakdown</h5>
+        </div>
+        <div class="card-body">
+            {% if category_data %}
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Books Count</th>
+                            <th>Total Expenses</th>
+                            <th>Average Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for category in category_data %}
+                        <tr>
+                            <td><strong>{{ category.name }}</strong></td>
+                            <td><span class="badge bg-primary">{{ category.book_count }}</span></td>
+                            <td><strong class="text-success">${{ category.total_expense|floatformat:2 }}</strong></td>
+                            <td>${{ category.avg_expense|floatformat:2 }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% else %}
+            <div class="text-center py-5">
+                <i class="fas fa-chart-bar fa-3x text-muted mb-3"></i>
+                <h5>No data available</h5>
+                <p class="text-muted">Add some books to see dashboard analytics!</p>
+                <a href="{% url 'book_list' %}" class="btn btn-primary">
+                    <i class="fas fa-book"></i> Manage Books
+                </a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    
+    <!-- Quick Actions -->
+    <div class="mt-4">
+        <h3>Quick Actions</h3>
+        <div class="row">
+            <div class="col-md-3">
+                <a href="{% url 'category_list' %}" class="btn btn-outline-primary w-100 mb-2">
+                    <i class="fas fa-tags"></i><br>View Categories
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="{% url 'book_list' %}" class="btn btn-outline-success w-100 mb-2">
+                    <i class="fas fa-book"></i><br>Manage Books
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="{% url 'import_data' %}" class="btn btn-outline-info w-100 mb-2">
+                    <i class="fas fa-upload"></i><br>Import Data
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="{% url 'expense_breakdown' %}" class="btn btn-outline-warning w-100 mb-2">
+                    <i class="fas fa-chart-pie"></i><br>Expense Analysis
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

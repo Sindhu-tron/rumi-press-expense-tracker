@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}Import Data - Rumi Press{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mb-4">
+        <i class="fas fa-upload"></i> Import Excel Data
+    </h1>
+    
+    <div class="card">
+        <div class="card-body">
+            <h5>Upload Books Distribution Expenses</h5>
+            <p>Upload your Excel file to import book data into the system.</p>
+            
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="file" class="form-label">Excel File (.xlsx, .xls):</label>
+                    <input type="file" name="file" class="form-control" accept=".xlsx,.xls" required>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-upload"></i> Import Data
+                </button>
+            </form>
+            
+            <div class="mt-4">
+                <h6>Expected File Format:</h6>
+                <ul>
+                    <li>Column: <code>id</code> - Book ID</li>
+                    <li>Column: <code>title</code> - Book title</li>
+                    <li>Column: <code>authors</code> - Author names</li>
+                    <li>Column: <code>publisher</code> - Publisher name</li>
+                    <li>Column: <code>category</code> - Book category</li>
+                    <li>Column: <code>published_date</code> - Publication date</li>
+                    <li>Column: <code>distribution_expense</code> - Cost amount</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

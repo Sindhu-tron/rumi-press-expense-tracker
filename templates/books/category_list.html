@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block title %}Categories - Rumi Press{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1><i class="fas fa-tags"></i> Book Categories</h1>
+    <a href="/admin/books/bookcategory/add/" class="btn btn-primary">
+        <i class="fas fa-plus"></i> Add Category
+    </a>
+</div>
+
+<div class="row">
+    {% for category in categories %}
+    <div class="col-md-4 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ category.name }}</h5>
+                <p class="card-text">{{ category.description }}</p>
+                <p class="text-muted">
+                    <small>Created: {{ category.created_at|date:"M d, Y" }}</small>
+                </p>
+                <a href="/admin/books/bookcategory/{{ category.id }}/change/" class="btn btn-sm btn-outline-primary">Edit</a>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <div class="col-12">
+        <div class="text-center py-5">
+            <i class="fas fa-tags fa-3x text-muted mb-3"></i>
+            <h5>No categories yet</h5>
+            <p class="text-muted">Start by creating your first book category!</p>
+            <a href="/admin/books/bookcategory/add/" class="btn btn-primary">
+                <i class="fas fa-plus"></i> Create First Category
+            </a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- Quick Actions -->
+<div class="mt-5">
+    <h3>Quick Actions</h3>
+    <div class="row">
+        <div class="col-md-3">
+            <a href="/admin/books/bookcategory/" class="btn btn-outline-primary w-100">
+                <i class="fas fa-tags"></i><br>Manage Categories
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="{% url 'book_list' %}" class="btn btn-outline-success w-100">
+                <i class="fas fa-book"></i><br>Manage Books
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="/admin/books/book/add/" class="btn btn-outline-info w-100">
+                <i class="fas fa-plus"></i><br>Add New Book
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="/admin/" class="btn btn-outline-secondary w-100">
+                <i class="fas fa-cog"></i><br>Admin Panel
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
