@@ -41,6 +41,7 @@ docker-compose up
  
 **Dashboard** — expense totals and category breakdown
 ![Dashboard](screenshots/Dashboard overview screenshot.png) 
+https://github.com/Sindhu-tron/rumi-press-expense-tracker/blob/main/screenshots/Book%20categories%20screenshot.png
  
 **Book list** — searchable, filterable
 ![Books](screenshots/Book management screenshot.png)
