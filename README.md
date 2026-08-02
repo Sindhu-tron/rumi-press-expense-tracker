@@ -1,6 +1,7 @@
 # rumi-press-expense-tracker
 A Django web application for tracking book distribution expenses. Built to replace a manual spreadsheet workflow with automated Excel import, a searchable book database, and a simple analytics dashboard.
-/das
+
+![Dashboard screenshot](screenshots/Dashboard%20overview%20screenshot.png)
 
 ## What it does
  
