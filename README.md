@@ -40,15 +40,19 @@ docker-compose up
 ## Screenshots
  
 **Dashboard** — expense totals and category breakdown
-![Dashboard](screenshots/Dashboard overview screenshot.png) 
-https://github.com/Sindhu-tron/rumi-press-expense-tracker/blob/main/screenshots/Book%20categories%20screenshot.png
- 
-**Book list** — searchable, filterable
-![Books](screenshots/Book management screenshot.png)
-https://github.com/Sindhu-tron/rumi-press-expense-tracker/blob/main/screenshots/Book%20management%20screenshot.png?raw=true 
- 
+![Dashboard](screenshots/Dashboard%20overview%20screenshot.png)
+
+**Book management** — searchable, filterable
+![Book management](screenshots/Book%20management%20screenshot.png)
+
+**Book categories** — category-wise breakdown
+![Book categories](screenshots/Book%20categories%20screenshot.png)
+
+**Expense analysis** — category-wise expense indicators
+![Expense analysis](screenshots/Expense%20analysis%20screenshot.png)
+
 **Excel import** — upload with progress and error reporting
-![Import](screenshots/import screenshot.png)
+![Import](screenshots/import%20screenshot.png)
 
 ## Project structure
  
