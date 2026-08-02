@@ -40,7 +40,7 @@ docker-compose up
 ## Screenshots
  
 **Dashboard** — expense totals and category breakdown
-![Dashboard](screenshots/Dashboard overview screenshot.png)
+![Dashboard](screenshots/Dashboard overview screenshot.png) screenshots/Book categories screenshot.png
  
 **Book list** — searchable, filterable
 ![Books](screenshots/Book management screenshot.png)
