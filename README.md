@@ -45,6 +45,7 @@ https://github.com/Sindhu-tron/rumi-press-expense-tracker/blob/main/screenshots/
  
 **Book list** — searchable, filterable
 ![Books](screenshots/Book management screenshot.png)
+https://github.com/Sindhu-tron/rumi-press-expense-tracker/blob/main/screenshots/Book%20management%20screenshot.png?raw=true 
  
 **Excel import** — upload with progress and error reporting
 ![Import](screenshots/import screenshot.png)
